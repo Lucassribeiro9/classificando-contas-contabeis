@@ -51,7 +51,7 @@ if st.button("Classificar"):
             # Melhores previsões
             st.write("---")
             st.write("**Contas com melhores previsões:**")
-            st.dataframe(df_results_sorted.head(5).style.format("{:.2f}%}"), use_container_width=True)
+            st.dataframe(df_results_sorted.head(5).style.format("{:.2f}%"), use_container_width=True)
         except Exception as e:
             st.error(f"Erro ao classificar: {e}")
     else:
