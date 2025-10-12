@@ -1,5 +1,4 @@
 import streamlit as st
-import joblib
 import pandas as pd
 import numpy as np
 import re
@@ -107,7 +106,6 @@ if uploaded_file is not None:
                 output = BytesIO()
                 with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
                     df_final.to_excel(writer, index=False, sheet_name='Classificação')
-                    writer.save()
                 processed_data = output.getvalue()
                 st.download_button(
                     label="📥 Baixar planilha classificada",
