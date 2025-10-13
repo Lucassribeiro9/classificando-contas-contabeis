@@ -98,7 +98,7 @@ if uploaded_file is not None:
                     df_for_class['CONTA'] = filled_accs
                     df_for_class['PROBABILIDADE'] = final_proba
                 # Preenchendo NaNs restantes com 'Conta já veio preenchida'
-                df_filtered_training['PROBABILIDADE'] = 'Conta já veio preenchida'
+                df_training['PROBABILIDADE'] = 'Conta já veio preenchida'
                 # Gerando planilha final com os resultados
                 df_final = pd.concat([df_training, df_for_class], ignore_index=True)
                 # Garantindo que a coluna 'CONTA' seja do tipo string
