@@ -36,7 +36,7 @@ st.title("🤖 Ferramenta de Classificação Contábil")
 st.write("Faça o upload da sua planilha e a ferramenta irá classificar automaticamente as contas contábeis assim que o modelo for treinado.")
 st.info(
     "**Instruções:**\n"
-    "Sua planilha deve estar no formaoto Excel (.xlsx) e conter o mesmo layout da planilha fornecida\n"
+    "Sua planilha deve estar no formato Excel (.xlsx) e conter o mesmo layout da planilha fornecida\n"
     "A ferramenta usará as linhas preenchidas para aprender e treinar o modelo e depois preencherá as linhas vazias.\n"
 )
 # Upload do arquivo
