@@ -99,6 +99,8 @@ if uploaded_file is not None:
                     df_for_class['PROBABILIDADE'] = final_proba
                 # Gerando planilha final com os resultados
                 df_final = pd.concat([df_training, df_for_class], ignore_index=True)
+                # Garantindo que a coluna 'CONTA' seja do tipo string
+                df_final['CONTA'] = df_final['CONTA'].astype(str)
                 st.success("Classificação concluída!")
                 st.write(f"Total de lançamentos processados: {len(df_final)}")
                 st.dataframe(df_final.tail(len(df_for_class)+5)) # Mostra os classificados + 5 anteriores
