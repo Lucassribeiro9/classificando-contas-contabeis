@@ -136,6 +136,8 @@ if uploaded_file is not None:
                 df_final = pd.concat([df_training, df_for_class], ignore_index=True)
                 # Garantindo que a coluna 'CONTA' seja do tipo string
                 df_final['CONTA'] = df_final['CONTA'].astype(str)
+                # Regex para remover '.0' de números inteiros representados como string
+                df_final['CONTA'] = df_final['CONTA'].str.replace(r'\.0$', '', regex=True)
                 st.success("Classificação concluída!")
                 st.write(f"Total de lançamentos processados: {len(df_final)}")
                 st.dataframe(df_final.tail(len(df_for_class)+5)) # Mostra os classificados + 5 anteriores
